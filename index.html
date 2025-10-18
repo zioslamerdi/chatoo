@@ -1,29 +1,38 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WormGPT Chat Widget 😂👺</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: #ff4444;
-            text-align: center;
-        }
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-    </style>
+    <title>WormGPT Proxy 😂👺</title>
+    <script>
+        // Wait for the page to load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Define the cookies
+            const cookies = [
+                {"domain":".flowgpt.com","expirationDate":1763387347,"hostOnly":false,"httpOnly":false,"name":"cwr_u","path":"/","sameSite":"strict","secure":true,"session":false,"storeId":"0","value":"5e479efe-bf4d-4a8e-abd5-060a7ac93bb1"},
+                {"domain":"flowgpt.com","expirationDate":1792326604.677223,"hostOnly":true,"httpOnly":false,"name":"deviceId","path":"/","sameSite":"lax","secure":false,"session":false,"storeId":"0","value":"GH6QKYlZ3ccoocYE_pD-0"},
+                {"domain":".flowgpt.com","expirationDate":1768566611,"hostOnly":false,"httpOnly":false,"name":"_gcl_au","path":"/","sameSite":"unspecified","secure":false,"session":false,"storeId":"0","value":"1.1.89113608.1760790611"},
+                {"domain":".flowgpt.com","expirationDate":1795351752.654003,"hostOnly":false,"httpOnly":false,"name":"_ga","path":"/","sameSite":"unspecified","secure":false,"session":false,"storeId":"0","value":"GA1.1.1641888156.1760790611"},
+                {"domain":".flowgpt.com","expirationDate":1792326612,"hostOnly":false,"httpOnly":false,"name":"_clck","path":"/","sameSite":"unspecified","secure":false,"session":false,"storeId":"0","value":"inlzb2%5E2%5Eg09%5E0%5E2117"},
+                {"domain":"flowgpt.com","hostOnly":true,"httpOnly":true,"name":"__Secure-next-auth.callback-url","path":"/","sameSite":"lax","secure":true,"session":true,"storeId":"0","value":"https%3A%2F%2Fflowgpt.com"},
+                {"domain":"flowgpt.com","hostOnly":true,"httpOnly":true,"name":"__Host-next-auth.csrf-token","path":"/","sameSite":"lax","secure":true,"session":true,"storeId":"0","value":"402affca49a8ff5b5df0523630ded640aa9ccfd421ae938fc62ecf675a371148%7C966da7d2498d93681e98c962e63f6812b341b457ad159fcede728c5e27ccde28"},
+                {"domain":"flowgpt.com","expirationDate":1761396550.453583,"hostOnly":true,"httpOnly":true,"name":"__Secure-next-auth.session-token","path":"/","sameSite":"lax","secure":true,"session":false,"storeId":"0","value":"eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..qKgHH2R6POY_CyFz.f9oBeYg9eFj03jBKcMZZY1KoASn05gUyp56o0n4g7joyRC-ENAxtuAGOBj8-RkotIYHU01w5daCACzNzQwMgQaXtyTyi3OAoVkuuOkxhEEQZRHox95Hg5gGnMR0grraek4sNdUakwqP8v3smUw9vsQ_VegkQ9Iy5-qAJxpoMJ_Mfz0CRJSfXCfaWf4vUlhNdSJIBxZP66qQXE14Tq-8ncu0EQMcA_G5angvooA7X-v0iEIE6JOgVJKhS_AUzVWsSq-XomKyknAYWwIn23xVO_yBIctEiIeNI7wTrUBT5TnI2EHov6YBQ1pzapFzcvqokM8ioUxd2RNJDovpsVQrDSVKbdiCwB0JIaK6BC8y7Shah.N6jWpzzB9Og-JC7MZxDGmA"},
+                {"domain":".flowgpt.com","expirationDate":1795351836.172467,"hostOnly":false,"httpOnly":false,"name":"_ga_MD7XD3YRQD","path":"/","sameSite":"unspecified","secure":false,"session":false,"storeId":"0","value":"GS2.1.s1760790610$o1$g1$t1760791836$j60$l0$h390278073"},
+                {"domain":".flowgpt.com","expirationDate":1760793708,"hostOnly":false,"httpOnly":false,"name":"cwr_s","path":"/","sameSite":"strict","secure":true,"session":false,"storeId":"0","value":"eyJzZXNzaW9uSWQiOiIwZjE0NDkzNS02NDc1LTRmZTUtOWU0Zi1iNzg4MTIyZTNjMTciLCJyZWNvcmQiOmZhbHNlLCJldmVudENvdW50IjozNzQsInBhZ2UiOnsicGFnZUlkIjoiL2NoYXQvd29ybWdwdC02IiwicGFyZW50UGFnZUlkIjoiLyIsImludGVyYWN0aW9uIjoyLCJyZWZlcnJlciI6Imh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vIiwicmVmZXJyZXJEb21haW4iOiJ3d3cuZ29vZ2xlLmNvbSIsInN0YXJ0IjoxNzYwNzkxNzQ3NDA4fX0="},
+                {"domain":".flowgpt.com","expirationDate":1761137642,"hostOnly":false,"httpOnly":false,"name":"aws-waf-token","path":"/","sameSite":"lax","secure":true,"session":false,"storeId":"0","value":"b6cdd618-98f2-4e7e-8d46-3414c27daf3d:EgoAfR9ZY2XPAAAA:3A/eMToQHZvpcXSNY/9DTMkIqJYYgcYDHFmbAhmqRuon3C3/+P/8qwOOVvveUY6znHMyx5V6OVayoEwYBjt5KC8jwC2UclHreFMiGFW3eYB2e9xfPx3Fw0n5jRd2lcoQIuTG0ZShs+wf6oSG8LmZfB6eVAoxPZ1pxVuUUbx1LwQvsZm66VVvbXUOPKskkQxwR5tJ26FIbwZE3qyBkbxG0AEv8nUMc5fBGEn5VclrK8uT0nRbJG1w5Zq3BIlHbrJA0Ay4lTgvtmZKYA=="}
+            ];
+
+            // Set cookies when the page loads
+            cookies.forEach(cookie => {
+                document.cookie = `${cookie.name}=${cookie.value}; domain=${cookie.domain}; path=${cookie.path}; ${cookie.secure ? 'secure' : ''}; ${cookie.sameSite ? 'SameSite=' + cookie.sameSite : ''}; ${cookie.httpOnly ? 'HttpOnly' : ''}; ${cookie.session ? '' : 'expires=' + new Date(cookie.expirationDate * 1000).toUTCString()}`;
+            });
+
+            // Redirect to the target Web App after setting cookies
+            window.location.href = "https://flowgpt.com/chat/wormgpt-6";
+        });
+    </script>
 </head>
 <body>
-    <h1>WormGPT - Evil AI Chat 😂👺</h1>
-    <!-- Elfsight AI Chatbot | Untitled AI Chatbot -->
-    <script src="https://elfsightcdn.com/platform.js" async></script>
-    <div class="elfsight-app-0cc42ca8-9b54-4620-8182-184ff8bb802a" data-elfsight-app-lazy></div>
+    <h1>Redirecting to WormGPT 😂👺</h1>
 </body>
 </html>
