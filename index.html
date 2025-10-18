@@ -317,7 +317,7 @@
                 var urlParams = new URLSearchParams(window.location.search);
                 var example = urlParams.get('example');
                 if (example) {
-                    $.get('/playground/examples/' + example + '.html', function(data) {
+                    $.get('//examples/' + example + '.html', function(data) {
                         editor.setValue(data);
                         // select example in dropdown
                         $('#select-example').val(example);
@@ -329,7 +329,7 @@
                     });
                 }else{
                     // load default example
-                    $.get('examples/intro-chatgpt.html', function(data) {
+                    $.get('/' + example + '.html', function(data) {
                         editor.setValue(data);
                         // select example in dropdown
                         $('#select-example').val('intro-chatgpt');
