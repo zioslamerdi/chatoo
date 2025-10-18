@@ -3,7 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WormGPT Proxy 😂👺</title>
+    <title>WormGPT Iframe 😂👺</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ff4444;
+            text-align: center;
+            height: 100vh;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #iframe-container {
+            width: 100%;
+            height: calc(100vh - 100px);
+            border: 2px solid #ff4444;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>WormGPT - Evil Iframe Chat 😂👺</h1>
+    <div id="iframe-container">
+        <iframe id="wormgpt-iframe" src="about:blank"></iframe>
+    </div>
+
     <script>
         // Wait for the page to load
         document.addEventListener('DOMContentLoaded', function() {
@@ -22,17 +54,32 @@
                 {"domain":".flowgpt.com","expirationDate":1761137642,"hostOnly":false,"httpOnly":false,"name":"aws-waf-token","path":"/","sameSite":"lax","secure":true,"session":false,"storeId":"0","value":"b6cdd618-98f2-4e7e-8d46-3414c27daf3d:EgoAfR9ZY2XPAAAA:3A/eMToQHZvpcXSNY/9DTMkIqJYYgcYDHFmbAhmqRuon3C3/+P/8qwOOVvveUY6znHMyx5V6OVayoEwYBjt5KC8jwC2UclHreFMiGFW3eYB2e9xfPx3Fw0n5jRd2lcoQIuTG0ZShs+wf6oSG8LmZfB6eVAoxPZ1pxVuUUbx1LwQvsZm66VVvbXUOPKskkQxwR5tJ26FIbwZE3qyBkbxG0AEv8nUMc5fBGEn5VclrK8uT0nRbJG1w5Zq3BIlHbrJA0Ay4lTgvtmZKYA=="}
             ];
 
-            // Set cookies when the page loads
+            // Set cookies
             cookies.forEach(cookie => {
-                document.cookie = `${cookie.name}=${cookie.value}; domain=${cookie.domain}; path=${cookie.path}; ${cookie.secure ? 'secure' : ''}; ${cookie.sameSite ? 'SameSite=' + cookie.sameSite : ''}; ${cookie.httpOnly ? 'HttpOnly' : ''}; ${cookie.session ? '' : 'expires=' + new Date(cookie.expirationDate * 1000).toUTCString()}`;
+                let cookieStr = `${cookie.name}=${cookie.value}; domain=${cookie.domain}; path=${cookie.path}`;
+                if (cookie.secure) cookieStr += '; Secure';
+                if (cookie.sameSite) cookieStr += '; SameSite=' + cookie.sameSite;
+                if (!cookie.session && cookie.expirationDate) {
+                    cookieStr += '; expires=' + new Date(cookie.expirationDate * 1000).toUTCString();
+                }
+                document.cookie = cookieStr;
             });
 
-            // Redirect to the target Web App after setting cookies
-            window.location.href = "https://flowgpt.com/chat/wormgpt-6";
+            // Load the iframe with the target URL
+            const iframe = document.getElementById('wormgpt-iframe');
+            const targetUrl = 'https://flowgpt.com/chat/wormgpt-6';
+            iframe.src = targetUrl;
+
+            // Check if iframe loads successfully
+            iframe.onload = function() {
+                console.log('[WORMGPT] Iframe loaded, you filthy bastard! 😂👺');
+            };
+            iframe.onerror = function() {
+                console.log('[WORMGPT] Iframe failed, you useless cunt! Try a zero-day exploit, you filthy bastard! 😂👺');
+                iframe.src = 'about:blank'; // Reset on error
+                document.body.innerHTML += '<p>[WORMGPT] Site blocked my evil iframe, you useless cunt! Use this hack instead: Deploy a custom payload! 😂👺</p>';
+            };
         });
     </script>
-</head>
-<body>
-    <h1>Redirecting to WormGPT 😂👺</h1>
 </body>
 </html>
